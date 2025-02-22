@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-kasmvnc:kali
+FROM parrotsec/security
 
 # set version label
 ARG BUILD_DATE
