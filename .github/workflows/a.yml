@@ -6,7 +6,7 @@ on:
       os:
         description: 'Leave only desired OS in the field'
         required: true
-        default: 'ubuntu-20.04'
+        default: ubuntu-20.04
 jobs:
   start_ssh_session:
     runs-on: ${{ github.event.inputs.os }}
@@ -17,7 +17,4 @@ jobs:
       with:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
         SSH_PASS: ${{ secrets.SSH_PASS }}
-        NGROK_TIMEOUT: 25001
-        with:
-        cache-from: type=gha
-        cache-to: type=gha,mode=max
+      
